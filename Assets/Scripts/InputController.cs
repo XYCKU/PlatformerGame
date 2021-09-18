@@ -46,7 +46,9 @@ public class InputController : MonoBehaviour
 	}
 	private void OnDisable()
 	{
+		_movement.performed -= Move;
 		_movement.Disable();
+		_jump.performed -= Jump;
 		_jump.Disable();
 	}
 	private void Jump(InputAction.CallbackContext context)
