@@ -5,11 +5,11 @@ public class GameHandler : MonoBehaviour
 {
 	private void OnEnable()
 	{
-		EnemyController.OnPlayerEnemyCollision += LoseGame;
+		EnemyHandler.OnPlayerEnemyCollision += LoseGame;
 	}
 	private void OnDisable()
 	{
-		EnemyController.OnPlayerEnemyCollision -= LoseGame;
+		EnemyHandler.OnPlayerEnemyCollision -= LoseGame;
 	}
 	private void LoseGame()
 	{
@@ -18,6 +18,7 @@ public class GameHandler : MonoBehaviour
 	}
 	private void RestartGame()
 	{
+		Debug.Log("Restarting Level");
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 }

@@ -3,9 +3,6 @@ using UnityEngine.InputSystem;
 using UnityEngine.Events;
 public class InputController : MonoBehaviour
 {
-	/*private static InputController _instance;
-	public static InputController Instance { get => _instance; }*/
-
 	private InputAction _movement;
 	private InputAction _jump;
 	private PlayerInputActions _playerInputActions;
@@ -17,21 +14,7 @@ public class InputController : MonoBehaviour
 
 	private void Awake()
 	{
-		/*if (_instance != null && _instance != this) {
-			Destroy(this.gameObject);
-			return;
-		} else {
-			_instance = this;
-			DontDestroyOnLoad(this.gameObject);
-		}*/
-
 		_playerInputActions = new PlayerInputActions();
-	}
-	private void OnDestroy()
-	{
-		/*if (this == _instance) {
-			_instance = null;
-		}*/
 	}
 	private void OnEnable()
 	{
