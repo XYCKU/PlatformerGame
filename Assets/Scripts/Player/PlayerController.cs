@@ -2,49 +2,25 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-	[SerializeField] private LayerMask _groundLayerMask;
-	[SerializeField] private float _moveSpeed;
-	[SerializeField] private float _jumpForce;
-	[SerializeField] private float _groundCheckRadius;
-	private Rigidbody2D _rigidbody2D;
-	private CircleCollider2D _collider;
+	[SerializeField] private InputController _inputController;
+	private IMoveHandler<float> _mover;
+	private IJumpHandler _jumper;
 
-	private void Start()
+	private void Awake()
 	{
-		_groundCheckRadius = 0.1f;
-		_rigidbody2D = GetComponent<Rigidbody2D>();
-		_collider = GetComponent<CircleCollider2D>();
+		_mover = GetComponent<IMoveHandler<float>>();
+		_jumper = GetComponent<IJumpHandler>();
 	}
 	private void OnEnable()
 	{
-		InputController.OnPlayerJump += Jump;
+		InputController.OnPlayerJump += _jumper.Jump;
 	}
 	private void OnDisable()
 	{
-		InputController.OnPlayerJump -= Jump;
+		InputController.OnPlayerJump -= _jumper.Jump;
 	}
-
 	private void FixedUpdate()
 	{
-		Move();
+		_mover.Move(_inputController.GetHorizontalInput());
 	}
-
-	private void Move()
-	{
-		float velocity = InputController.Instance.GetHorizontalInput() * _moveSpeed * Time.fixedDeltaTime;
-		_rigidbody2D.velocity = new Vector2(velocity, _rigidbody2D.velocity.y);
-	}
-	public void Jump()
-	{
-		if (IsGrounded()) {
-			_rigidbody2D.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
-		}
-	}
-	private bool IsGrounded()
-	{
-		RaycastHit2D raycastHit2D = Physics2D.BoxCast(_collider.bounds.center, _collider.bounds.size, 
-														0f, Vector2.down, _groundCheckRadius, _groundLayerMask);
-		return raycastHit2D.collider != null;
-	}
-	
 }
