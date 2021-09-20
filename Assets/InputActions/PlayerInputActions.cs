@@ -38,9 +38,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""02c543ee-6297-4e70-b077-9ed7a4bf6e8e"",
+                    ""id"": ""8d54797b-fb87-4c56-8cb8-99874e20046c"",
                     ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
+                    ""interactions"": ""Tap(duration=0.5)"",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
                     ""action"": ""Jump"",
@@ -51,7 +51,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""eb5734c0-df3a-4343-bf66-ce97c5127988"",
                     ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
+                    ""interactions"": ""Tap(duration=0.5)"",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
                     ""action"": ""Jump"",

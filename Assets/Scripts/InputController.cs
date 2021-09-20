@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Events;
+
 public class InputController : MonoBehaviour
 {
 	private InputAction _movement;
@@ -11,6 +11,7 @@ public class InputController : MonoBehaviour
 	public delegate void InputEvent();
 	public static event HInputEvent OnPlayerHInput;
 	public static event InputEvent OnPlayerJump;
+	public static event InputEvent OnPlayerHoldJump;
 
 	private void Awake()
 	{
@@ -23,20 +24,27 @@ public class InputController : MonoBehaviour
 
 		_movement.performed += Move;
 		_movement.Enable();
-
+		
 		_jump.performed += Jump;
+		_jump.canceled += HoldJump;
 		_jump.Enable();
 	}
 	private void OnDisable()
 	{
 		_movement.performed -= Move;
 		_movement.Disable();
+
 		_jump.performed -= Jump;
+		_jump.canceled -= HoldJump;
 		_jump.Disable();
 	}
 	private void Jump(InputAction.CallbackContext context)
 	{
 		OnPlayerJump?.Invoke();
+	}
+	private void HoldJump(InputAction.CallbackContext context)
+	{
+		OnPlayerHoldJump?.Invoke();
 	}
 	private void Move(InputAction.CallbackContext context)
 	{
