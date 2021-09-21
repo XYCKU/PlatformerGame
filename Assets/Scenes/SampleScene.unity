@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: _followTarget
       value: 
       objectReference: {fileID: 1976186521}
+    - target: {fileID: 1976186525, guid: 4ed150127e081f84fb335b9d5a987015, type: 3}
+      propertyPath: _holdJumpMultiplier
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5276877710190619528, guid: 4ed150127e081f84fb335b9d5a987015, type: 3}
       propertyPath: _inputController
       value: 
@@ -326,7 +330,7 @@ MonoBehaviour:
   _followTarget: {fileID: 1976186521}
   _offset: {x: 0, y: 0, z: -1}
   _smoothSpeed: 0.125
-  _smoothSizeSpeed: 0.05
+  _smoothSizeSpeed: 0.01
 --- !u!81 &931867762
 AudioListener:
   m_ObjectHideFlags: 0
@@ -386,7 +390,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931867760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.0168085, y: -3.969359, z: -9.526557}
+  m_LocalPosition: {x: 7.41, y: -2.46, z: -9.526557}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

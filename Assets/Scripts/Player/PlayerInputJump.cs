@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerInputJump : MonoBehaviour, IJumpHandler, IHoldJumpHandler
 {
 	[SerializeField] private float _jumpForce;
+	[SerializeField] private float _holdJumpMultiplier;
 	[SerializeField] private float _groundCheckRadius;
 	[SerializeField] private LayerMask _layerMask;
 	private Rigidbody2D _rigidbody2D;
@@ -21,7 +22,7 @@ public class PlayerInputJump : MonoBehaviour, IJumpHandler, IHoldJumpHandler
 	public void HoldJump()
 	{
 		if (IsGrounded()) {
-			_rigidbody2D.AddForce(Vector2.up * _jumpForce * 2, ForceMode2D.Impulse);
+			_rigidbody2D.AddForce(Vector2.up * _jumpForce * _holdJumpMultiplier, ForceMode2D.Impulse);
 		}
 	}
 	private bool IsGrounded()
