@@ -3,13 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour
 {
+	[SerializeField] private PlayerController _player;
 	private void OnEnable()
 	{
-		EnemyHandler.OnPlayerEnemyCollision += LoseGame;
+		_player.OnPlayerDeath += LoseGame;
 	}
 	private void OnDisable()
 	{
-		EnemyHandler.OnPlayerEnemyCollision -= LoseGame;
+		
 	}
 	private void LoseGame()
 	{
@@ -18,7 +19,6 @@ public class GameHandler : MonoBehaviour
 	}
 	private void RestartGame()
 	{
-		Debug.Log("Restarting Level");
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 }

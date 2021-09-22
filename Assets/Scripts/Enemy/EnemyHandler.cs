@@ -2,12 +2,14 @@ using UnityEngine;
 
 public class EnemyHandler : MonoBehaviour
 {
-	public delegate void EnemyCollision();
-	public static event EnemyCollision OnPlayerEnemyCollision;
+	public delegate void CollisionDelegate(IAttacker attacker);
+	public static CollisionDelegate OnPlayerEnemyCollision;
 	private IMoveHandler<float> _mover;
+	private IAttacker _attacker;
 
 	private void Awake()
 	{
+		_attacker = GetComponent<IAttacker>();
 		_mover = GetComponent<IMoveHandler<float>>();
 	}
 	private void FixedUpdate()
@@ -17,7 +19,7 @@ public class EnemyHandler : MonoBehaviour
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
 		if (collision.gameObject.GetComponent<IPlayer>() != null) {
-			OnPlayerEnemyCollision?.Invoke();
+			OnPlayerEnemyCollision?.Invoke(_attacker);
 		}
 	}
 }

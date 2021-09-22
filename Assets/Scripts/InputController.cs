@@ -9,9 +9,9 @@ public class InputController : MonoBehaviour
 
 	public delegate void HInputEvent(float inputValue);
 	public delegate void InputEvent();
-	public static event HInputEvent OnPlayerHInput;
-	public static event InputEvent OnPlayerJump;
-	public static event InputEvent OnPlayerHoldJump;
+	public event HInputEvent OnPlayerHInput;
+	public event InputEvent OnPlayerJump;
+	public event InputEvent OnPlayerHoldJump;
 
 	private void Awake()
 	{
