@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Clouds
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 1
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 2
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 985594bec7577dd4eba3e232bd117467, type: 3}
+    - {fileID: 2800000, guid: 408b63e3cf3f49340abaa565aa290435, type: 3}
+    - {fileID: 2800000, guid: 9e281a7851a164240bacaa585f917549, type: 3}
+    - {fileID: 2800000, guid: cdd8f5f78d1027943b2017d215181be2, type: 3}
+    - {fileID: 2800000, guid: 69183de45126c8349b94837e5b9b1e3f, type: 3}
+    - {fileID: 2800000, guid: 354a8f8ba0b86254fadb906ae0973c5c, type: 3}
+    - {fileID: 2800000, guid: cc1ff828862f79f498a559bd5452bc0a, type: 3}
+    - {fileID: 2800000, guid: ef303cf2d860f5b469ffa1941e177d51, type: 3}
+    - {fileID: 2800000, guid: 9cfc842e77f2ada42aa58b793e31b889, type: 3}
+    - {fileID: 2800000, guid: a06c5f77d5de9b94390a9eece2e0fd53, type: 3}
+    - {fileID: 2800000, guid: e9a343239557c8e42956d734477ff4f3, type: 3}
+    - {fileID: 2800000, guid: 2c0808c181b08464abba26611d000eec, type: 3}
+    - {fileID: 2800000, guid: 1d66717cb205aa445a8238fdc6baf470, type: 3}
+    - {fileID: 2800000, guid: e11782b39ccda8b4dbb04a7d807751a8, type: 3}
+    - {fileID: 2800000, guid: e0d4733f4390e1d4db3c5d7de0457b32, type: 3}
+    - {fileID: 2800000, guid: b0284f77707778a48985d2fe9c435507, type: 3}
+    totalSpriteSurfaceArea: 16777216
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 2c0808c181b08464abba26611d000eec, type: 3}
+  - {fileID: 21300000, guid: ef303cf2d860f5b469ffa1941e177d51, type: 3}
+  - {fileID: 21300000, guid: e9a343239557c8e42956d734477ff4f3, type: 3}
+  - {fileID: 21300000, guid: e11782b39ccda8b4dbb04a7d807751a8, type: 3}
+  - {fileID: 21300000, guid: 408b63e3cf3f49340abaa565aa290435, type: 3}
+  - {fileID: 21300000, guid: 69183de45126c8349b94837e5b9b1e3f, type: 3}
+  - {fileID: 21300000, guid: b0284f77707778a48985d2fe9c435507, type: 3}
+  - {fileID: 21300000, guid: a06c5f77d5de9b94390a9eece2e0fd53, type: 3}
+  - {fileID: 21300000, guid: cdd8f5f78d1027943b2017d215181be2, type: 3}
+  - {fileID: 21300000, guid: cc1ff828862f79f498a559bd5452bc0a, type: 3}
+  - {fileID: 21300000, guid: 9e281a7851a164240bacaa585f917549, type: 3}
+  - {fileID: 21300000, guid: 354a8f8ba0b86254fadb906ae0973c5c, type: 3}
+  - {fileID: 21300000, guid: 1d66717cb205aa445a8238fdc6baf470, type: 3}
+  - {fileID: 21300000, guid: 9cfc842e77f2ada42aa58b793e31b889, type: 3}
+  - {fileID: 21300000, guid: 985594bec7577dd4eba3e232bd117467, type: 3}
+  - {fileID: 21300000, guid: e0d4733f4390e1d4db3c5d7de0457b32, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - clouds_12
+  - clouds_08
+  - clouds_11
+  - clouds_14
+  - clouds_02
+  - clouds_05
+  - clouds_16
+  - clouds_10
+  - clouds_04
+  - clouds_07
+  - clouds_03
+  - clouds_06
+  - clouds_13
+  - clouds_09
+  - clouds_01
+  - clouds_15
+  m_RenderDataMap: {}
+  m_Tag: Clouds
+  m_IsVariant: 0
