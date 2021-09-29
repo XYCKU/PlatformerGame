@@ -3,14 +3,19 @@ using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour
 {
-	[SerializeField] private PlayerController _player;
+	[SerializeField] private Player _player;
+	private HealthSystem _playerHealthSystem;
+	private void Awake()
+	{
+		_playerHealthSystem = _player.GetComponent<HealthSystem>();
+	}
 	private void OnEnable()
 	{
-		_player.OnPlayerDeath += LoseGame;
+		_playerHealthSystem.OnDeath += LoseGame;
 	}
 	private void OnDisable()
 	{
-		
+		_playerHealthSystem.OnDeath -= LoseGame;
 	}
 	private void LoseGame()
 	{

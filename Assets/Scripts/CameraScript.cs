@@ -15,8 +15,12 @@ public class CameraScript : MonoBehaviour
 		_defaultSize = _camera.orthographicSize;
 	}
 
-	private void FixedUpdate()
+	private void LateUpdate()
     {
+		transform.position = (Vector3)_followTarget.position + _offset;
+    }
+	private void Process()
+	{
 		Vector3 endPosition = new Vector3(_followTarget.position.x, _followTarget.position.y, 0f) + _offset;
 		Vector3 currentPosition = Vector3.Lerp(transform.position, endPosition, _smoothSpeed);
 		transform.position = currentPosition;
@@ -25,6 +29,5 @@ public class CameraScript : MonoBehaviour
 		float currentSize = Mathf.Lerp(_camera.orthographicSize, newSize, _smoothSizeSpeed);
 		_camera.orthographicSize = currentSize;
 
-		//transform.LookAt(_followTarget);
-    }
+	}
 }
