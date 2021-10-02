@@ -1,25 +1,23 @@
 using UnityEngine;
 
-public class Projectile : MonoBehaviour, IAttacker
+public class MortairProjectile : MonoBehaviour, IAttacker
 {
 	private int _damage;
-	private Vector2 _velocity;
 	private Rigidbody2D _rigidbody2D;
+	private Vector2 _force;
 	public int Damage => _damage;
 
 	private void Start()
 	{
 		_rigidbody2D = GetComponent<Rigidbody2D>();
+		_rigidbody2D.AddForce(_force, ForceMode2D.Impulse);
 		Destroy(gameObject, 5f);
 	}
-	private void FixedUpdate()
-	{
-		_rigidbody2D.MovePosition(_rigidbody2D.position + _velocity * Time.fixedDeltaTime);
-	}
-	public void Setup(int damage, Vector2 velocity)
+	public void Setup(int damage, Vector2 force)
 	{
 		_damage = damage;
-		_velocity = velocity;
+		_force = force;
+		
 	}
 	public void DealDamage(IDamageable target)
 	{

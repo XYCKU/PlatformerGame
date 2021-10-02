@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
 	private IMovable<float> _playerMovement;
 	private IDamageable _healthSystem;
 
+	public IDamageable DamageSystem => _healthSystem;
+	
 	private void Awake()
 	{
 		_playerMovement = GetComponent<IMovable<float>>();
@@ -22,15 +24,11 @@ public class Player : MonoBehaviour
 	{
 		_inputController.OnPlayerJump += _playerJump.Jump;
 		_inputController.OnPlayerHoldJump += _playerHoldJump.Jump;
-		
-		EnemyHandler.OnPlayerEnemyCollision += _healthSystem.TakeDamage;
 	}
 	private void OnDisable()
 	{
 		_inputController.OnPlayerJump -= _playerJump.Jump;
 		_inputController.OnPlayerHoldJump -= _playerHoldJump.Jump;
-
-		EnemyHandler.OnPlayerEnemyCollision -= _healthSystem.TakeDamage;
 	}
 	private void FixedUpdate()
 	{

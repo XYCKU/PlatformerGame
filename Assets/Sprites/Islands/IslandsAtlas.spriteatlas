@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: IslandsAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: d2282021fa23ba0499c95f995755a44c, type: 3}
+    - {fileID: 2800000, guid: b8345719f4c40e54abed82307cd32391, type: 3}
+    - {fileID: 2800000, guid: 93c6d87e5fa20cf4ba9d13645d511a33, type: 3}
+    - {fileID: 2800000, guid: 8e1322ecfa77a4d4595fa6cca0ea0abe, type: 3}
+    - {fileID: 2800000, guid: d9f8453b3ad5d2e4e8bbf9ebf0c2d674, type: 3}
+    - {fileID: 2800000, guid: 1b9589cb9cc970a4e96489d0a7af9ee3, type: 3}
+    - {fileID: 2800000, guid: 19c31348143829146828b4be3a3a52da, type: 3}
+    - {fileID: 2800000, guid: aa03e8307231f1242bd5bcf8f84caff4, type: 3}
+    totalSpriteSurfaceArea: 8388608
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: aa03e8307231f1242bd5bcf8f84caff4, type: 3}
+  - {fileID: 21300000, guid: d2282021fa23ba0499c95f995755a44c, type: 3}
+  - {fileID: 21300000, guid: 19c31348143829146828b4be3a3a52da, type: 3}
+  - {fileID: 21300000, guid: b8345719f4c40e54abed82307cd32391, type: 3}
+  - {fileID: 21300000, guid: d9f8453b3ad5d2e4e8bbf9ebf0c2d674, type: 3}
+  - {fileID: 21300000, guid: 1b9589cb9cc970a4e96489d0a7af9ee3, type: 3}
+  - {fileID: 21300000, guid: 8e1322ecfa77a4d4595fa6cca0ea0abe, type: 3}
+  - {fileID: 21300000, guid: 93c6d87e5fa20cf4ba9d13645d511a33, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Islands_08
+  - Islands_01
+  - Islands_07
+  - Islands_02
+  - Islands_05
+  - Islands_06
+  - Islands_04
+  - Islands_03
+  m_RenderDataMap: {}
+  m_Tag: IslandsAtlas
+  m_IsVariant: 0

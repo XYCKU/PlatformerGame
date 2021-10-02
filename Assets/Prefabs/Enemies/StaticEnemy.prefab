@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051173}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6059858406549229177}
@@ -43,7 +43,8 @@ GameObject:
   - component: {fileID: 6059858406549229183}
   - component: {fileID: 6059858406549229176}
   - component: {fileID: 8154655059424870385}
-  - component: {fileID: 183579873}
+  - component: {fileID: 6006759364427065117}
+  - component: {fileID: 494386706}
   m_Layer: 0
   m_Name: StaticEnemy
   m_TagString: Untagged
@@ -179,8 +180,8 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 10
---- !u!114 &183579873
+  m_Radius: 16.16
+--- !u!114 &6006759364427065117
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -189,12 +190,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 6059858406549229179}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccb1410286e049a459c23ff6147b55ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 9191825ba37d8d845b0ec84a42f2fe22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 2
-  _attackDelay: 2
-  _projectileVelocity: 10
-  _projectile: {fileID: 4125345232952589588, guid: 6eaf7946bd9bcb3439cb199a2fca473d, type: 3}
+--- !u!114 &494386706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6059858406549229179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3402dab740746a448484c9b6c894931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shootDelay: 2
+  _minVerticalDistance: 5
+  _damage: 10
   _shootPoint: {fileID: 2051174}
-  _target: {fileID: 0}
+  _pfProjectile: {fileID: 6607338575585618317, guid: 882d1c37090afb74dbd3be06a57922df, type: 3}

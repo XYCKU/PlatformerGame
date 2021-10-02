@@ -10,18 +10,15 @@ public class CloudSpawner : MonoBehaviour, ISpawner
 	[SerializeField, Range(0f, 1f)] private float _spawnRareRatio;
 	[SerializeField] private Vector2 _direction;
 	[SerializeField] private Transform _removePosition;
-	[SerializeField] private GameObject _pfCloud;
 
-	[SerializeField] private List<Sprite> _spawnable;
-	[SerializeField] private List<Sprite> _spawnableRare;
+	[SerializeField] private List<GameObject> _spawnable;
+	[SerializeField] private List<GameObject> _spawnableRare;
 
-	private SpriteRenderer _spriteRenderer;
 	private float _spawnRadius;
 
 	private void Awake()
 	{
 		_spawnRadius = _collider.radius;
-		_spriteRenderer = _pfCloud.GetComponent<SpriteRenderer>();
 	}
 	private void Start()
 	{
@@ -30,14 +27,13 @@ public class CloudSpawner : MonoBehaviour, ISpawner
 	public IEnumerator Spawn()
 	{
 		while (true) {
-			_spriteRenderer.sprite = GetRandomSprite();
-			GameObject newCloud = Instantiate(_pfCloud, GetRandomPoint(), Quaternion.identity);
+			GameObject newCloud = Instantiate(GetRandomSprite(), GetRandomPoint(), Quaternion.identity);
 			Cloud cloud = newCloud.GetComponent<Cloud>();
 			cloud.SetValues(_direction, _removePosition.position, _cloudSpeed);
 			yield return new WaitForSeconds(_spawnDelay);
 		}
 	}
-	private Sprite GetRandomSprite()
+	private GameObject GetRandomSprite()
 	{
 		if (_spawnRareRatio > 0f && Random.value <= _spawnRareRatio) {
 			return GetRandomFromList(_spawnableRare);

@@ -1,5 +1,6 @@
+using System.Collections;
 using UnityEngine;
-public interface IShooter
+public interface IShooter<T>
 {
-	void Shoot(GameObject target);
+	void Shoot(T target);
 }

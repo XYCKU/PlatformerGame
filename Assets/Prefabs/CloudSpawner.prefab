@@ -81,25 +81,24 @@ MonoBehaviour:
   _spawnRareRatio: 0.05
   _direction: {x: 1, y: 0}
   _removePosition: {fileID: 2600179600568151938}
-  _pfCloud: {fileID: 5980021282454422745, guid: e8a41ba2811e8a74394a8092566e1777, type: 3}
   _spawnable:
-  - {fileID: 8287873616420496286, guid: ae4b5b9df0dc7014782e85009b2faab5, type: 3}
-  - {fileID: 7911139459876737251, guid: ae4b5b9df0dc7014782e85009b2faab5, type: 3}
-  - {fileID: -1115256706364395465, guid: ae4b5b9df0dc7014782e85009b2faab5, type: 3}
-  - {fileID: -477254976604553037, guid: ae4b5b9df0dc7014782e85009b2faab5, type: 3}
-  - {fileID: 5291327898690728900, guid: ae4b5b9df0dc7014782e85009b2faab5, type: 3}
-  - {fileID: -8294918184612582425, guid: ae4b5b9df0dc7014782e85009b2faab5, type: 3}
-  - {fileID: -8869869572783183582, guid: ae4b5b9df0dc7014782e85009b2faab5, type: 3}
-  - {fileID: 4149633398077095797, guid: ae4b5b9df0dc7014782e85009b2faab5, type: 3}
-  - {fileID: -7053933015307643321, guid: ae4b5b9df0dc7014782e85009b2faab5, type: 3}
-  - {fileID: -8919544922904042576, guid: ae4b5b9df0dc7014782e85009b2faab5, type: 3}
-  - {fileID: -5800895834718413680, guid: ae4b5b9df0dc7014782e85009b2faab5, type: 3}
-  - {fileID: -5914686066510983863, guid: ae4b5b9df0dc7014782e85009b2faab5, type: 3}
-  - {fileID: 8274779338559331536, guid: ae4b5b9df0dc7014782e85009b2faab5, type: 3}
+  - {fileID: 5980021282454422745, guid: e8a41ba2811e8a74394a8092566e1777, type: 3}
+  - {fileID: 5980021282454422745, guid: 3291710d9965c314281f24e60a4d39d4, type: 3}
+  - {fileID: 5980021282454422745, guid: fefca96274d55194c93a5ae6d2046f84, type: 3}
+  - {fileID: 5980021282454422745, guid: c5c643161007a5d4c88910207e491636, type: 3}
+  - {fileID: 5980021282454422745, guid: 146312e535fdb1c43bc2d4d0ee2d62ce, type: 3}
+  - {fileID: 5980021282454422745, guid: 5d1b285cfa6f9bd45a13c4792feb6d61, type: 3}
+  - {fileID: 5980021282454422745, guid: ba9815eb2c5bc494ab7600cc1b326e89, type: 3}
+  - {fileID: 5980021282454422745, guid: a30a464fb7b84a64993293432255c358, type: 3}
+  - {fileID: 5980021282454422745, guid: ea80ebb848373ed489825cc5e2721cdd, type: 3}
+  - {fileID: 5980021282454422745, guid: 83cec9a4492c27c468bbe5efee449d83, type: 3}
+  - {fileID: 5980021282454422745, guid: 2d8655dc642cfd7478bba701ade9161b, type: 3}
+  - {fileID: 5980021282454422745, guid: 951cb4d890c519d458f5a8c17a53b747, type: 3}
+  - {fileID: 5980021282454422745, guid: fae735c9c2e13324298d132be0a17ba7, type: 3}
   _spawnableRare:
-  - {fileID: -3052748074778076258, guid: ae4b5b9df0dc7014782e85009b2faab5, type: 3}
-  - {fileID: 4522440564201344832, guid: ae4b5b9df0dc7014782e85009b2faab5, type: 3}
-  - {fileID: -8444972217358185434, guid: ae4b5b9df0dc7014782e85009b2faab5, type: 3}
+  - {fileID: 5980021282454422745, guid: 1d29c78523cb3a34f8108a66ec42a89a, type: 3}
+  - {fileID: 5980021282454422745, guid: e5ece34a8fbdb18409f33e965a25abfd, type: 3}
+  - {fileID: 5980021282454422745, guid: a6130846a010f534eb80f8e7556a69cc, type: 3}
 --- !u!58 &2600179600886200802
 CircleCollider2D:
   m_ObjectHideFlags: 0
