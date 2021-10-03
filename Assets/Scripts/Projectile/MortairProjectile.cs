@@ -10,14 +10,13 @@ public class MortairProjectile : MonoBehaviour, IAttacker
 	private void Start()
 	{
 		_rigidbody2D = GetComponent<Rigidbody2D>();
-		_rigidbody2D.AddForce(_force, ForceMode2D.Impulse);
+		_rigidbody2D.velocity = _force;
 		Destroy(gameObject, 5f);
 	}
 	public void Setup(int damage, Vector2 force)
 	{
 		_damage = damage;
 		_force = force;
-		
 	}
 	public void DealDamage(IDamageable target)
 	{

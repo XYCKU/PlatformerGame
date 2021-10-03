@@ -26,7 +26,6 @@ public class MortairShooter : MonoBehaviour, IShooter<Player>
         
         Destroy(proj.gameObject, 5f);
     }
-
     private IEnumerator ShootCoroutine()
     {
         while (_targets.Count > 0)

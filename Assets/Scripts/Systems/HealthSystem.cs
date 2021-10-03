@@ -7,6 +7,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
 
 	public delegate void HealthEvent();
 	public HealthEvent OnDeath;
+	public HealthEvent OnHpChange;
 	public HealthEvent OnDamage;
 	public HealthEvent OnHeal;
 
@@ -15,12 +16,15 @@ public class HealthSystem : MonoBehaviour, IDamageable
 		get => _health;
 		set
 		{
-			if (value > _health) {
-				OnDamage?.Invoke();
-			} else {
-				OnHeal?.Invoke();
-			}
+			int oldHealth = _health;
 			_health = Mathf.Clamp(value, 0, _maxHealth);
+			
+			OnHpChange?.Invoke();
+			if (value > oldHealth) {
+				OnHeal?.Invoke();
+			} else {
+				OnDamage?.Invoke();
+			}
 			if (_health == 0) {
 				OnDeath?.Invoke();
 			}
